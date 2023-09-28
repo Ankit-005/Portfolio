@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="container flexDisplay">
+                <div class="navLogo">
+                    <a href="#heroSection"><h1>Ankit Ghosh</h1></a>
+                </div>
+                <div class="navMenu">
+                    <ul class="flexDisplay">
+                        <li><a href="#heroSection" class="navMenuItem navActive">Home</a></li>
+                        <li><a href="#aboutSection" class="navMenuItem">About</a></li>
+                        <li><a href="#skillsSection" class="navMenuItem">Skills</a></li>
+                        <li><a href="#portfolioSection" class="navMenuItem">Portfolio</a></li>
+                        <li><a href="#contactSection" class="navMenuItem">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navBtn">
+                    <button class="toggleBtn" onclick="modeToggle()">
+                        <img src="./Assets/lightMode.svg">
+                        <img src="./Assets/darkMode.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="hamburger" onclick="hamburgerAnimation()"></div>
+        </nav>
+    </header>
+
+    <section id="heroSection" class="container flexDisplay">
+        <div class="left">
+            <div class="position"><h3>Web Development</h3></div>
+            <div class="position"><h3>Machine Learning</h3></div>
+            <div class="name"><h1>Ankit Ghosh</h1></div>
+            <div class="about">
+                Passionate web developer with a flair for innovation, crafting digital experiences that captivate and empower users.
+                A Machine Learning enthusiast, who believes in harnessing the power of machine learning for enriching user experience.
+            </div>
+            <div class="btns">
+                <button><a download target="_blank" href="./Assets/AG Resume Final.pdf" class="downloadCv">Download CV</a></button>
+                <button><a href="#contactSection" class="hireMe">Hire Me Now</a></button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="circle">
+                <div class="imgBox">
+                    <img src="./Assets/prof_new.png">
+                </div>
+            </div>
+        </div>
+        <div class="links">
+            <a target="_blank" href="https://www.instagram.com/ankitg_500"><img src="./Assets/instagram.svg"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/ankit-005-bit/"><img src="./Assets/linkedin.svg"></a>
+            <a target="_blank" href="https://github.com/Ankit-005"><img src="./Assets/github.svg"></a>
+        </div>
+    </section>
+
+    <section id="aboutSection" class="container flexDisplay">
+        <div class="heading"><h1>About Me</h1></div>
+        <div class="left">
+            <div class="aboutImg"><img src="./Assets/about.png"></div>
+        </div>
+        <div class="right">
+            <div class="aboutContent">
+                <p>A Web Developer, proficient in HTML, CSS and JavaScript. Have project experience in React,Express, MongoDB and NodeJS.</p>
+                <br>
+                <p>Also passionate about Machine Learning, with sound knowledge of Pandas, Numpy, Scikit-Learn, Tensorflow and PyTorch.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skillsSection" class="container flexDisplay
+    ">
+        <div class="heading"><h1>Skills</h1></div>
+        <div class="skills">
+            <div class="skill flexDisplay">
+                <h1>HTML</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">85%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>CSS</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">85%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>JavaScript</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">85%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Java</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">85%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>C++</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">80%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Python</h1>
+                <h1 class="label">Intermediate</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">75%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Pandas</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">85%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Numpy</h1>
+                <h1 class="label">Intermediate</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">70%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Scikit-Learn</h1>
+                <h1 class="label">Advanced</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">80%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>Tensorflow</h1>
+                <h1 class="label">Intermediate</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">70%</h1>
+            </div>
+            <div class="skill flexDisplay">
+                <h1>PyTorch</h1>
+                <h1 class="label">Basics</h1>
+                <div class="progressBar"></div>
+                <h1 class="percentage">50%</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolioSection">
+        <div class="heading"><h1>Portfolio</h1></div>
+        <div class="projects flexDisplay">
+            <div class="project">
+                <div class="thumbnail"></div>
+                <h1 class="projectName">Get Social</h1>
+                <p class="projectDesc">
+                    A social media application to create,delete,like and comment on posts, which also provides post recommendations.
+                </p>
+                <div class="btns">
+                    <!-- <button><a>Visit</a></button> -->
+                    <button><a target="_blank" href="https://github.com/Ankit-005/GetSocial-App">GitHub</a></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="thumbnail"></div>
+                <h1 class="projectName">Road Accident Severity Prediction</h1>
+                <p class="projectDesc">
+                    Analyzed road accident data and trained a machine learning model that can predict an accident's severity based on some inputs.
+                </p>
+                <div class="btns">
+                    <!-- <button><a>Visit</a></button> -->
+                    <button><a target="_blank" href="https://github.com/Ankit-005/RTA-Severity-Prediction-App">GitHub</a></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="thumbnail"></div>
+                <h1 class="projectName">Fooding Habits Survey</h1>
+                <p class="projectDesc">
+                    Conducted a survey on students' eating habits and their effects on their health. Trained a deep learning model to predict a student's health.
+                </p>
+                <div class="btns">
+                    <!-- <button><a>Visit</a></button> -->
+                    <button><a target="_blank" href="https://github.com/Ankit-005/Fooding_Habits_Survey">GitHub</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactSection" class="container flexDisplay">
+        <div class="heading"><h1>Contact Me</h1></div>
+        <form id="contact_form" class="flexDisplay">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="number" name="number" placeholder="Your Phone Number" required>
+            <textarea name="message" cols="30" rows="6" placeholder="Your Message"></textarea>
+            <div class="btns">
+                <button type="submit" onclick="openEmailApp()"><a>Send</a></button>
+            </div>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; Ankit Ghosh || All Rights Reserved</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

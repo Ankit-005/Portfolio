@@ -1,0 +1,955 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #cf0a0a;
+    --dark-color: #9e0000;
+}
+
+.light-mode{
+    --bg-color: #fff;
+    --fg-color: #202124;
+}
+
+.dark-mode{
+    --bg-color: #202124;
+    --fg-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    color: var(--fg-color);
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+.container{
+    width: 93%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.flexDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--fg-color);
+    cursor: pointer;
+}
+
+button, input{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+img{
+    width: 36px;
+}
+
+section{
+    height: 100vh;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav{
+    padding: 1rem 0;
+    background: var(--bg-color);
+}
+
+header nav div:nth-child(1){
+    justify-content: space-between;
+}
+
+header nav .navLogo{
+    font-size: 2rem;
+}
+
+header nav .navMenu{
+    width: 72%;
+    padding: 0 1rem;
+}
+
+.navMenu ul{
+    justify-content: flex-end;
+}
+
+.navMenu ul li{
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.navActive{
+    color: var(--main-color);
+}
+
+.navMenu ul li a{
+    transition: color 0.3s ease-in-out;
+}
+
+.navMenu ul li a:hover{
+    color: var(--main-color);
+}
+
+nav .navBtn{
+    position: relative;
+}
+
+nav .navBtn img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+}
+
+nav .navBtn img:hover{
+    scale: 1.1;
+}
+
+.hamburger{
+    display: none;
+    background: url("./Assets/menu.svg") no-repeat center;
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.displayNone{
+    display: none;
+}
+
+.displayBlock{
+    display: block;
+}
+
+#heroSection{
+    position: relative;
+}
+
+#heroSection .left{
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+#heroSection .left .position{
+    display: inline-block;
+    color: #fff;
+    background: var(--main-color);
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 50px;
+    box-shadow: 0 0 18px -6px var(--dark-color);
+    margin: 1.2rem 0;
+}
+
+#heroSection .left .name{
+    margin-bottom: 1rem;
+}
+
+#heroSection .left .about{
+    width: 90%;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+#heroSection .right {
+    width: 40%;
+  }
+  
+  #heroSection .right .circle {
+    height: 335px;
+    width: 335px;
+    margin: auto;
+    background: var(--main-color);
+    border: 6px solid var(--dark-color);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #heroSection .right .circle::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 345px;
+    height: 345px;
+    border: 6px dashed var(--dark-color);
+    border-radius: 100%;
+  }  
+
+  #heroSection .right .circle::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    border: 6px dotted var(--dark-color);
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+#heroSection .right .circle .imgBox{
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50% 0);
+    width: 100%;
+    border-radius: 20px 20px 200px 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroSection .right .circle .imgBox::before{
+    content: "";
+    position: absolute;
+    top: 63%;
+    left: 5%;
+    width: 25px;
+    height: 25px;
+    background: var(--dark-color);
+    border-radius: 50%;
+}
+
+#heroSection .right .circle .imgBox::after{
+    content: "";
+    position: absolute;
+    top: 54%;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    background: var(--dark-color);
+    border-radius: 50%;
+}
+
+#heroSection .right .circle img{
+    width: 75%;
+    /* height: 150%; */
+}
+    
+
+#heroSection .links{
+    position: absolute;
+    bottom: 3%;
+    left:0;
+}
+
+#heroSection .links a{
+    padding: 0 1rem;
+    transition: scale 2s ease-in-out;  
+}
+
+#heroSection .links a:hover img{
+    transform-origin: bottom;
+    scale: 1.1;
+}
+
+.btns{
+    width: 100%;
+}
+
+.btns button{
+    position: relative;
+    padding: 1rem 0;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btns button a{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.btns button:nth-child(1){
+    margin-right: 2rem;
+    background: var(--main-color);
+}
+
+.btns button:nth-child(2){
+    background: #000;
+}
+
+.btns button::before{
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: -1;
+    transition: scale 0.6s ease-in-out;
+}
+
+.btns button:nth-child(1)::before{
+    background: #000;
+}
+
+.btns button:nth-child(2)::before{
+    background: var(--main-color);
+}
+
+.btns button:hover::before{
+    scale: 40;
+}
+
+.btns button:active{
+    scale:0.96;
+}
+
+section .heading{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+section .heading::before{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 6px;
+    background: var(--main-color);
+    border-radius: 50px;
+}
+
+#aboutSection .left{
+    width: 50%;
+}
+
+#aboutSection .left img{
+    width: 80%;
+}
+
+#aboutSection .right{
+    width: 50%;
+}
+
+#aboutSection .right p{
+    font-size: 1.8rem;
+    line-height: 50px;
+}
+
+#skillsSection .skills{
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 1px solid var(--fg-color);
+    height: 450px;
+    overflow-y: auto;
+} 
+
+#skillsSection .skill{
+    justify-content: space-between;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--fg-color);
+    border-spacing: 0px;
+}
+
+#skillsSection .skill h1{
+    font-size: 1rem;
+}
+
+#skillsSection .skill h1:nth-child(1){
+    width: 270px;
+}
+
+#skillsSection .skill h1:nth-child(2){
+    color: #fff;
+    background: var(--main-color);
+    padding: 0.3rem 0.9rem 0.2rem 0.9rem;
+    border-radius: 50px;
+    text-align: center;
+    width: 180px;
+}
+
+#skillsSection .skill .progressBar{
+    width: 30%;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#skillsSection .skill .progressBar::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    background: var(--main-color);
+    border-radius: 50px;
+}
+
+#skillsSection .skill:nth-child(1) .progressBar::before{
+    width: 85%;
+}
+
+#skillsSection .skill:nth-child(2) .progressBar::before{
+    width: 85%;
+}
+
+#skillsSection .skill:nth-child(3) .progressBar::before{
+    width: 85%;
+}
+
+#skillsSection .skill:nth-child(4) .progressBar::before{
+    width: 85%;
+}
+
+#skillsSection .skill:nth-child(5) .progressBar::before{
+    width: 80%;
+}
+
+#skillsSection .skill:nth-child(6) .progressBar::before{
+    width: 75%;
+}
+
+#skillsSection .skill:nth-child(7) .progressBar::before{
+    width: 80%;
+}
+
+#skillsSection .skill:nth-child(8) .progressBar::before{
+    width: 70%;
+}
+
+#skillsSection .skill:nth-child(9) .progressBar::before{
+    width: 80%;
+}
+
+#skillsSection .skill:nth-child(10) .progressBar::before{
+    width: 70%;
+}
+
+#skillsSection .skill:nth-child(11) .progressBar::before{
+    width: 50%;
+}
+
+#portfolioSection{
+    height: 100%;
+}
+
+#portfolioSection h1:nth-child(1){
+    margin-top: 3rem;
+}
+
+.projects{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.project{
+    width: 30%;
+    margin: 2rem 0;
+}
+
+.project .thumbnail{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.2rem;
+    border: 6px solid var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 0 18px -6px var(--main-color);
+    transition: scale 0.3s;
+    color: #fff;
+}
+
+.project .thumbnail:hover{
+    scale: 0.96;
+}
+
+.project h1{
+    font-size: 1.5rem;
+}
+
+.project .projectDesc{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    margin-bottom: 1.8rem;
+}
+
+#contactSection form{
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 400px;
+}
+
+#contactSection form input, #contactSection form textarea{
+    width: 80%;
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    color: var(--fg-color);
+    background: transparent;
+    border: 2px solid var(--fg-color);
+    cursor: text;
+    border-radius: 50px;
+}
+
+#contactSection form textarea{
+    border-radius: 12px;
+    resize: none;
+}
+
+#contactSection .btns{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#footer{
+    background: var(--main-color);
+    padding: 1.2rem 0 1rem 0;
+}
+
+#footer p{
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.navShadow{
+    box-shadow: 0 0 1rem #0000003d;
+}
+
+#heroSection .right .circle::before{
+    transform-origin: 0 0;
+    animation: rotateRightAnimation 30s infinite;
+}
+
+@keyframes rotateRightAnimation {
+    0%{
+        rotate: 0;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+}
+
+#heroSection .right .circle::after{
+    transform-origin: 0 0;
+    animation: rotateLeftAnimation 18s infinite;
+}
+
+@keyframes rotateLeftAnimation {
+    0%{
+        rotate: 0;
+    }
+
+    100%{
+        rotate: -360deg;
+    }
+}
+
+#heroSection .right .circle .imgBox::before{
+    animation: upAndDownAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes upAndDownAnimation {
+    0%{
+        top: 45%;
+    }
+
+    100%{
+        top: 50%;
+    }
+}
+
+#heroSection .right .circle .imgBox::after{
+    animation: upAndDownSecondAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes upAndDownSecondAnimation {
+    0%{
+        top: 50%;
+    }
+
+    100%{
+        top: 40%;
+    }
+}
+
+.hiddenRevealAnimation::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    transition: transform 2s 0.3s;
+}
+
+.showRevealAnimation::before{
+    transform: translate(100%,-50%);
+}
+
+.hiddenLeftAnimation{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-60%);
+    transition: all 1s;
+}
+
+.showLeftAnimation{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hiddenRightAnimation{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(60%);
+    transition: all 1s;
+}
+
+.showRightAnimation{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hiddenUpAnimation{
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(60%);
+    transition: all 1s;
+}
+
+.showUpAnimation{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.hiddenProgressBarAnimation::before{
+    transform-origin: left;
+    scale: 0 1;
+    transition: scale 1s 0.6s;
+}
+
+.showProgressBarAnimation::before{
+    scale: 1;
+}
+
+.hiddenThumbnailAnimation{
+    opacity: 0;
+    filter: blur(3px);
+    scale: 0.6;
+    transition: all 1.5s;
+}
+
+.showThumbnailAnimation{
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+}
+
+@media (max-width: 1200px){
+    #heroSection .left{
+        width: 50%;
+    }
+
+    #heroSection .right{
+        width: 50%;
+    }
+
+    #heroSection .right .circle{
+        width: 360px;
+        height: 360px;
+    }
+
+    #aboutSection .right p{
+        line-height: 40px;
+    }
+
+    .project{
+        width: 32%;
+    }
+}
+
+@media (max-width: 1024px){
+    *{
+        font-size: 14px;
+    }
+
+    .navMenu{
+        position: absolute;
+        top: 270%;
+        left: 50%;
+        transform: translateX(100%);
+        z-index: 100;
+        transition: transform 0.3s;
+    }
+
+    .navMenu ul{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .navMenu ul li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navMenu li a{
+        font-size: 2rem;
+    }
+
+    .navMenu li:before, #header .navMenu a::before{
+        display: none;
+    }
+
+    #header .navBtn{
+        position: fixed;
+        bottom: 6%;
+        right: 6%;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        background: var(--bg-color);
+        border-radius: 12px;
+        box-shadow: 0 0 12px 0 #00000036;
+        z-index: 200;
+    }
+
+    #header .navBtn button img{
+        left: 50%;
+        transform-origin: left top;
+        transform: translate(-50%,-50%);
+    }
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translateY(-50%) rotate(0);
+        transition: transform 0.5s, background-img 0.1s 0.25s;
+    }
+
+    .hamburgerAnimation{
+        transform: translateY(-50%) rotate(360deg);
+        background-image: url("./Assets/close.svg");
+    }
+
+    .navMenuAnimation{
+        transform: translateX(-50%);
+    }
+
+    .navMenuBackgroundAnimation::before{
+        content: "";
+        position: fixed;
+        top: 72px;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        z-index: 100;
+        transition: transform 0.3s;
+    }
+
+    .navMenuBackgroundAnimation::before{
+        transform: translateX(0);
+    }
+
+    .scrollOff{
+        overflow-y: hidden;
+    }
+
+    #heroSection .left{
+        width: 55%;
+    }
+
+    #heroSection .left .btns button{
+        margin-bottom: 1.8rem;
+    }
+
+    #heroSection .right{
+        width: 45%;
+    }
+
+    #heroSection .right .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    #heroSection .right .circle::before{
+        width: 330px;
+        height: 330px;
+    }
+
+    #heroSection .right .circle::after{
+        width: 360px;
+        height: 360px;
+    }
+
+    #skillsSection .skill h1:nth-child(1){
+        width: 200px;
+    }
+
+    .project{
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        overflow-x: unset;
+    }
+
+    section{
+        height: unset;
+    }
+
+    #heroSection{
+        flex-direction: column-reverse;
+    }
+
+    #heroSection .left{
+        width: 100%;
+    }
+
+    #heroSection .right{
+        width: 100%;
+        margin: 8rem 0 4rem 0;
+    }
+
+    #heroSection .left{
+        text-align: center;
+    }
+
+    #heroSection .left .name h1{
+        font-size: 4rem;
+    }
+
+    #heroSection .left .about{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #heroSection .left .btns{
+        margin-bottom: 2rem;
+        justify-content: space-around;
+    }
+
+    #heroSection .left .btns button{
+        margin: 1rem;
+    }
+
+    #heroSection .links{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+
+    #aboutSection .left, #aboutSection .right{
+        width: 100%;
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+    #skillsSection .skills{
+        margin-top: 4rem;
+    }
+
+    #skillsSection .skills .skill{
+        flex-wrap: wrap;
+        gap: 1.5rem 0;
+    }
+
+    #skillsSection .skills .skill h1:nth-child(1){
+        width: 60%;
+    }
+
+    #skillsSection .skills .skill h1:nth-child(2){
+        width: 40%;
+    }
+
+    #skillsSection .skills .skill .progressBar{
+        width: 80%;
+    }
+
+    .projects{
+        justify-content: center;
+    }
+
+    .project{
+        width: 90%;
+    }
+
+    .project .thumbnail:hover{
+        scale: 1;
+    }
+
+    #contact_form{
+        margin-top: 2rem;
+    }
+
+    #footer{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px){
+    *{
+        font-size: 12px;
+    }
+}
